@@ -1,23 +1,63 @@
-import math
+import Stack
+import calculs
 
 
-# n: number of points of the ground
-# c: Dictionary that saves the coordinates tuples
-# v0: Coordinate x of the last column
+def greedy(n):
+    arbol = []
+    impossible = True
+    arbol.append(n[0])
+    minimo = 1e+100
+    pos = 1
+    i = 0
+    # guardar_vec(arbol)
+    print(arbol)
+    distance = [99, 45, 62, 60]
+    distan = []
+    while pos != len(n) - 1:
 
-def greedy(n, c, v0=0):
-    T = []
-    B = [v0]
-    v = v0
-    while len(B) < n:
-        minimum = 1e+100  # infinite cost
-        for j in range(n):
-            cost = c[(min(v, j), max(v, j))]
-            if j not in B and cost < minimum:
-                minimum = cost
-                w = j
-    B.append(w)
-    T.append((v, w))
-    v = w
-    T.append((v, v0))
-    return T
+        i = i + 1
+        if i < len(n):
+            arbol.append(n[i])
+            distan.append(distance[i])
+            print(arbol)
+            cost, impossible = calculs.costs_aqueduct(len(arbol), 54, 67, 191, arbol, distan)
+            print(cost)
+            print(minimo)
+
+            if cost < minimo:
+                arbol.remove(n[i])
+                distan.remove(distance[i])
+                minimo = cost
+                pos = i
+            else:
+                arbol.remove(n[i])
+                distan.remove(distance[i])
+
+        else:
+            i = pos
+            arbol.append(n[i])
+            distan.append(distance[i])
+            minimo = 1e+100
+        print(arbol)
+        print(pos)
+    arbol.append(n[pos])
+    distan.append(distance[pos])
+    print(arbol)
+    return minimo, impossible
+
+
+def guardar_vec(arbol):
+    lista2 = arbol.copy()
+    alt = []
+
+    for i in range(0, arbol.size()):
+        alt.insert(0, lista2.top())
+        lista2.pop()
+    print(arbol.size())
+    return alt
+
+
+if __name__ == "__main__":
+    n = [14, 16, 44, 55]
+    cost, impossible = greedy(n)
+    print(cost)
