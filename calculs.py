@@ -51,6 +51,26 @@ def obtain_values(values):
 
     return distance, alt, distance_x
 
+def obtain_distance(distance_x):
+    """This method obtains de three different values:
+    the distance between two columns (d), the different heights (coordinates Y),
+    the different coordinates X
+    """
+
+    distance = []  # Distance
+    # Distance Coordinate Sol
+    alt = []  # Height
+    ant_dis = -50
+
+
+    if len(distance_x) == 2:
+        distance.append(distance_x[len(distance_x) - 1] - distance_x[0])
+    else:
+        for pos in range(0, len(distance_x)):
+            if ant_dis != -50:
+                distance.append(distance_x[pos] - ant_dis)
+            ant_dis = distance_x[pos]
+    return distance
 
 def measures(values):
     """
@@ -82,7 +102,7 @@ def costs_aqueduct(terrain_points, alpha, beta, height_aqueduct, alt, distance):
             break
 
     cost = (alpha * costs_alt) + (beta * costs_dis)
-
+    #print(cost)
     return cost, impossible
 
 

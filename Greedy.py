@@ -1,63 +1,64 @@
 import Stack
 import calculs
+import read_file
 
 
 def greedy(n):
     arbol = []
+    alt = [45, 63, 70, 61, 57]
+    alture = []
+    distance = []
     impossible = True
+    alture.append(alt[0])
     arbol.append(n[0])
     minimo = 1e+100
     pos = 1
     i = 0
     # guardar_vec(arbol)
     print(arbol)
-    distance = [99, 45, 62, 20, 89]
-    distan = []
+
     while pos != len(n) - 1:
 
         i = i + 1
         if i < len(n):
             arbol.append(n[i])
-            distan.append(distance[i])
+            alture.append(alt[i])
             print(arbol)
-            cost, impossible = calculs.costs_aqueduct(len(arbol), 54, 67, 191, arbol, distan)
+            #print(alture)
+            distance = calculs.obtain_distance(arbol)
+            cost, impossible = calculs.costs_aqueduct(len(arbol), 78, 72, 169, alture, distance)
             print(cost)
             print(minimo)
 
             if cost < minimo:
                 arbol.remove(n[i])
-                distan.remove(distance[i])
+                alture.remove(alt[i])
                 minimo = cost
                 pos = i
             else:
                 arbol.remove(n[i])
-                distan.remove(distance[i])
+                alture.remove(alt[i])
 
         else:
             i = pos
             arbol.append(n[i])
-            distan.append(distance[i])
+            alture.append(alt[i])
             minimo = 1e+100
-        print(arbol)
-        print(pos)
+        #print(arbol)
+        #print(pos)
     arbol.append(n[pos])
-    distan.append(distance[pos])
+    alture.append(alt[pos])
     print(arbol)
     return minimo, impossible
 
 
-def guardar_vec(arbol):
-    lista2 = arbol.copy()
-    alt = []
-
-    for i in range(0, arbol.size()):
-        alt.insert(0, lista2.top())
-        lista2.pop()
-    print(arbol.size())
-    return alt
-
-
 if __name__ == "__main__":
-    n = [14, 16, 44, 75, 88]
+    n = [7, 61, 67, 77, 87]
     cost, impossible = greedy(n)
+
+    values, terrain_points, height_aqueduct, alpha, beta = read_file.read_file("testing/test5-2.in", data_separation=" ")
+    distance, alt, distance_x = calculs.obtain_values(values)
+
     print(cost)
+
+
