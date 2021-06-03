@@ -11,7 +11,7 @@ def greedy(n):
     i = 0
     # guardar_vec(arbol)
     print(arbol)
-    distance = [99, 45, 62, 60]
+    distance = [99, 45, 62, 20, 89]
     distan = []
     while pos != len(n) - 1:
 
@@ -58,6 +58,6 @@ def guardar_vec(arbol):
 
 
 if __name__ == "__main__":
-    n = [14, 16, 44, 55]
+    n = [14, 16, 44, 75, 88]
     cost, impossible = greedy(n)
     print(cost)
