@@ -6,7 +6,10 @@ Author names
 # Aaron Arenas Tomás
 # Marc Cervera Rosell
 # ************************************+
+from colorama import Fore
+
 import calculs
+import ejecutrar_test
 import read_file
 import arbol
 
@@ -67,12 +70,18 @@ class GreedyGlob:
 
 
 if __name__ == "__main__":
-    VALUES, TERRAIN_POINTS, HEIGHT_AQUEDUCT, ALPHA, BETA = read_file.read_file(
-        "testing/test5-2.in", data_separation=" ")
-    DISTANCE, ALT, DISTANCE_X = calculs.obtain_values(VALUES)
-    arbol.Arbol.alture.append(ALT[0])
-    arbol.Arbol.arbol.append(DISTANCE_X[0])
-
-    COST, IMPOSSIBLE = GreedyGlob.greedy(
-        GreedyGlob, DISTANCE_X, ALT, HEIGHT_AQUEDUCT, ALPHA, BETA)
-    print(COST)
+    i = 5
+    j = 1
+    for i in range(i, 8):
+        for j in range(1, 4):
+            VALUES, TERRAIN_POINTS, HEIGHT_AQUEDUCT, ALPHA, BETA = ejecutrar_test.leer_ejecutar(i, j)
+            DISTANCE, ALT, DISTANCE_X = calculs.obtain_values(VALUES)
+            arbol.Arbol.alture.append(ALT[0])
+            arbol.Arbol.arbol.append(DISTANCE_X[0])
+            print("---------------------------------------")
+            print(Fore.RED + "            Greedy recursive" + Fore.RESET)
+            COST, IMPOSSIBLE = GreedyGlob.greedy(GreedyGlob, DISTANCE_X, ALT, HEIGHT_AQUEDUCT, ALPHA, BETA)
+            GreedyGlob.i = 1
+            GreedyGlob.pos = 1
+            GreedyGlob.resultado = 0
+            ejecutrar_test.escribir_ejecutar2(i, j, COST)
