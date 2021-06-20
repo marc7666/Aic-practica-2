@@ -13,7 +13,8 @@ import arbol
 
 def greedy(distance_x, alt, height_aqueduct, alpha, beta, i, pos):  # pylint: disable=too-many-arguments
     """
-    This method aplies the greedy strategy to solve the problem
+    This method applies the greedy strategy to solve the problem.
+    This is the iterative version.
     """
     resultado = arbol.Arbol.minimo
     print(resultado)
