@@ -2,6 +2,8 @@
 
 ## Observacions i aclariments previs a la correcció del codi:
 
+## Fitxers i mètodes:
+
 ### Greedy recursiu:
 
 ### Greedy iteratiu:
