@@ -17,3 +17,7 @@ lint:
 
 test2:
 	python3 backtracking.py
+
+all:
+	make lint
+	make test
