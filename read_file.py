@@ -35,3 +35,4 @@ def read_file(filename, data_separation=" "):
             values.append((coordinate_x, coordinate_y))
             # Returning the data file
         return values, terrain_points, height_aqueduct, alpha, beta
+#
