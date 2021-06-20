@@ -6,9 +6,9 @@ import arbol
 def backtracking(distance_x, alt, height_aqueduct, alpha, beta):
     impossible = True
 
-    arbol.arbol.arbol.append(distance_x[0])
-    arbol.arbol.alture.append(alt[0])
-    coste = arbol.arbol.hijos(arbol.arbol, 1, distance_x, alt, height_aqueduct, alpha, beta)
+    arbol.Arbol.arbol.append(distance_x[0])
+    arbol.Arbol.alture.append(alt[0])
+    coste = arbol.Arbol.hijos(arbol.Arbol, 1, distance_x, alt, height_aqueduct, alpha, beta)
 
     return coste, impossible
 
@@ -18,4 +18,4 @@ if __name__ == "__main__":
     distance, alt, distance_x = calculs.obtain_values(values)
 
     coste, impossible = backtracking(distance_x, alt, height_aqueduct, alpha, beta)
-    print(arbol.arbol.minimo)
+    print(arbol.Arbol.minimo)
