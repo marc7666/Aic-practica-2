@@ -1,16 +1,16 @@
 import calculs
 import read_file
-import Arbol
+import arbol
 
 
 def DynamicProgramming(distance_x, alt, height_aqueduct, alpha, beta):
     impossible = True
 
-    Arbol.Arbol.arbol.append(distance_x[0])
-    Arbol.Arbol.alture.append(alt[0])
-    Arbol.Arbol.arbol.append(distance_x[1])
-    Arbol.Arbol.alture.append(alt[1])
-    coste = Arbol.Arbol.hijos(Arbol.Arbol, 2, distance_x, alt, height_aqueduct, alpha, beta)
+    arbol.arbol.arbol.append(distance_x[0])
+    arbol.arbol.alture.append(alt[0])
+    arbol.arbol.arbol.append(distance_x[1])
+    arbol.arbol.alture.append(alt[1])
+    coste = arbol.arbol.hijos(arbol.arbol, 2, distance_x, alt, height_aqueduct, alpha, beta)
 
     return coste, impossible
 

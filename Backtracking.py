@@ -1,26 +1,26 @@
 import calculs
 import read_file
-import Arbol
+import arbol
 
 
 def backtracking(distance_x, alt, height_aqueduct, alpha, beta):
     impossible = True
     coste = 0
 
-    Arbol.Arbol.arbol.append(distance_x[0])
-    Arbol.Arbol.alture.append(alt[0])
-    if len(Arbol.Arbol.arbol) == 2 and distance_x[len(distance_x) - 1] == Arbol.Arbol.arbol[len(Arbol.Arbol.arbol) - 1]:
+    arbol.arbol.arbol.append(distance_x[0])
+    arbol.arbol.alture.append(alt[0])
+    if len(arbol.arbol.arbol) == 2 and distance_x[len(distance_x) - 1] == arbol.arbol.arbol[len(arbol.arbol.arbol) - 1]:
         return coste
     for i in range(1, len(distance_x)):
 
-        Arbol.Arbol.arbol.append(distance_x[i])
-        Arbol.Arbol.alture.append(alt[i])
+        arbol.arbol.arbol.append(distance_x[i])
+        arbol.arbol.alture.append(alt[i])
         indice = distance_x.index(distance_x[i])
         print(2)
-        coste = Arbol.Arbol.hijos(Arbol.Arbol, indice + 1, distance_x, alt, height_aqueduct, alpha, beta)
+        coste = arbol.arbol.hijos(arbol.arbol, indice + 1, distance_x, alt, height_aqueduct, alpha, beta)
         print(coste)
-        Arbol.Arbol.arbol.pop()
-        Arbol.Arbol.alture.pop()
+        arbol.arbol.arbol.pop()
+        arbol.arbol.alture.pop()
 
     return coste, impossible
 

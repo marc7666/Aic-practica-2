@@ -1,4 +1,4 @@
-import Arbol
+import arbol
 import calculs
 import read_file
 

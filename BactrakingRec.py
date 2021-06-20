@@ -1,14 +1,14 @@
 import calculs
 import read_file
-import Arbol
+import arbol
 
 
 def backtracking(distance_x, alt, height_aqueduct, alpha, beta):
     impossible = True
 
-    Arbol.Arbol.arbol.append(distance_x[0])
-    Arbol.Arbol.alture.append(alt[0])
-    coste = Arbol.Arbol.hijos(Arbol.Arbol, 1, distance_x, alt, height_aqueduct, alpha, beta)
+    arbol.arbol.arbol.append(distance_x[0])
+    arbol.arbol.alture.append(alt[0])
+    coste = arbol.arbol.hijos(arbol.arbol, 1, distance_x, alt, height_aqueduct, alpha, beta)
 
     return coste, impossible
 
@@ -18,4 +18,4 @@ if __name__ == "__main__":
     distance, alt, distance_x = calculs.obtain_values(values)
 
     coste, impossible = backtracking(distance_x, alt, height_aqueduct, alpha, beta)
-    print(Arbol.Arbol.minimo)
+    print(arbol.arbol.minimo)
