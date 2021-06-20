@@ -46,7 +46,7 @@ class Arbol:  # pylint: disable=too-few-public-methods
             self.hijos(self, indice + 1, distance_x, alt, height_aqueduct, alpha, beta)
         else:
             if self.arbol[len(self.arbol) - 1] == distance_x[len(distance_x) - 1]:
-                print("rama", indice, self.arbol)
+                #print("rama", indice, self.arbol)
                 distance = calculs.obtain_distance(self.arbol)
                 cost, impossible = calculs.costs_aqueduct(
                     len(self.arbol), alpha, beta, height_aqueduct, self.alture, distance)

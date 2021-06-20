@@ -35,8 +35,8 @@ class Greedy_glob:
                 arbol.Arbol.arbol.append(distance_x[self.i])
                 arbol.Arbol.alture.append(alt[self.i])
                 distance = calculs.obtain_distance(arbol.Arbol.arbol)
-                print(arbol.Arbol.arbol)
-                cost, impossible = calculs.costs_aqueduct(
+                #print(arbol.Arbol.arbol)
+                cost, arbol.Arbol.impossible = calculs.costs_aqueduct(
                     len(arbol.Arbol.arbol), alpha, beta, height_aqueduct, arbol.Arbol.alture, distance)
 
                 if cost < arbol.Arbol.minimo:
@@ -63,7 +63,7 @@ class Greedy_glob:
 
 if __name__ == "__main__":
     VALUES, TERRAIN_POINTS, HEIGHT_AQUEDUCT, ALPHA, BETA = read_file.read_file(
-        "testing/test5-1.in", data_separation=" ")
+        "testing/test5-2.in", data_separation=" ")
     DISTANCE, ALT, DISTANCE_X = calculs.obtain_values(VALUES)
     arbol.Arbol.alture.append(ALT[0])
     arbol.Arbol.arbol.append(DISTANCE_X[0])
