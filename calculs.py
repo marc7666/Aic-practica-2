@@ -66,7 +66,7 @@ def obtain_distance(distance_x):
     if len(distance_x) == 2:
         distance.append(distance_x[len(distance_x) - 1] - distance_x[0])
     else:
-        for pos in range(0, len(distance_x)):
+        for pos in range(0, len(distance_x)):  # pylint: disable=C0200
             if ant_dis != -50:
                 distance.append(distance_x[pos] - ant_dis)
             ant_dis = distance_x[pos]

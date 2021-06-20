@@ -5,12 +5,12 @@ test:
 	python3 greedy.py
 	python3 greedy_rec.py
 
-all:
+lint:
 	pylint arbol.py
 	pylint backtracking.py
 	pylint backtracking_rec.py
-	pylint calculs.py
 	pylint dynamic_programming.py
 	pylint greedy.py
 	pylint read_file.py
 	pylint greedy_rec.py
+	pylint calculs.py
