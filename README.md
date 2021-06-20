@@ -3,10 +3,13 @@
 ## Observacions i aclariments previs a la correcció del codi:
 
 Tot el codi i la documentació ha estat realitzada en equip de persones, Aarón Arenas Tomás i Marc Cervera Rosell.
+
 A continuacó s'adjunten els enllaços als perfils de GitHub dels autors:
 Aarón Arenas | Marc Cervera
 ------------ | ------------
 https://github.com/aaron-at97 | https://github.com/marc7666
+
+IMPORTANT: **Els errors desabilitats al llarg del codi son falsos positius de l'eina pylint**
 
 ## Fitxers i mètodes:
 
