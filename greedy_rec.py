@@ -9,10 +9,12 @@ Author names
 import calculs
 import read_file
 import arbol
-class Greedy_glob:  # pylint: disable=too-few-public-methods
+
+class Greedy_glob:
     """
     This class generates a tree and the method calculates the cost of every branch.
     """
+
     i = 1
     pos = 1
     resultado = 0
