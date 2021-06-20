@@ -10,9 +10,11 @@ import calculs
 import read_file
 import arbol
 
-class Greedy_glob:
+
+# pylint: disable=E1121
+class GreedyGlob:  # pylint: disable=R0903
     """
-    This class generates a tree and the method calculates the cost of every branch.
+    This class generates a tree and the method applies the greedy strategy to solve the problem.
     """
 
     i = 1
@@ -24,10 +26,11 @@ class Greedy_glob:
         self.pos = 1
         self.resultado = 0
 
-    def greedy(self, distance_x, alt, height_aqueduct, alpha, beta):
+    def greedy(self, distance_x, alt, height_aqueduct, alpha, beta):  # pylint: disable=R0913
 
         """
-        This method aplies the greedy strategy to solve the problem
+        This method applies the greedy strategy to solve the problem.
+        This is the recursive version.
         """
 
         if arbol.Arbol.arbol[len(arbol.Arbol.arbol) - 1] != distance_x[len(distance_x) - 1]:
@@ -36,8 +39,9 @@ class Greedy_glob:
                 arbol.Arbol.alture.append(alt[self.i])
                 distance = calculs.obtain_distance(arbol.Arbol.arbol)
                 print(arbol.Arbol.arbol)
-                cost, impossible = calculs.costs_aqueduct(
-                    len(arbol.Arbol.arbol), alpha, beta, height_aqueduct, arbol.Arbol.alture, distance)
+                cost, arbol.Arbol.impossible = calculs.costs_aqueduct(
+                    len(arbol.Arbol.arbol), alpha, beta, height_aqueduct,
+                    arbol.Arbol.alture, distance)
 
                 if cost < arbol.Arbol.minimo:
                     arbol.Arbol.arbol.remove(distance_x[self.i])
@@ -60,7 +64,6 @@ class Greedy_glob:
         return self.greedy(self, distance_x, alt, height_aqueduct, alpha, beta)
 
 
-
 if __name__ == "__main__":
     VALUES, TERRAIN_POINTS, HEIGHT_AQUEDUCT, ALPHA, BETA = read_file.read_file(
         "testing/test5-1.in", data_separation=" ")
@@ -68,5 +71,6 @@ if __name__ == "__main__":
     arbol.Arbol.alture.append(ALT[0])
     arbol.Arbol.arbol.append(DISTANCE_X[0])
 
-    COST, IMPOSSIBLE = Greedy_glob.greedy(Greedy_glob, DISTANCE_X, ALT, HEIGHT_AQUEDUCT, ALPHA, BETA)
+    COST, IMPOSSIBLE = GreedyGlob.greedy(
+        GreedyGlob, DISTANCE_X, ALT, HEIGHT_AQUEDUCT, ALPHA, BETA)
     print(COST)
