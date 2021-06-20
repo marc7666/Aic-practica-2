@@ -11,7 +11,7 @@ def backtracking(distance_x, alt, height_aqueduct, alpha, beta):
     Arbol.Arbol.alture.append(alt[0])
     if len(Arbol.Arbol.arbol) == 2 and distance_x[len(distance_x) - 1] == Arbol.Arbol.arbol[len(Arbol.Arbol.arbol) - 1]:
         return coste
-    for i in range(1, 2):
+    for i in range(1, len(distance_x)):
 
         Arbol.Arbol.arbol.append(distance_x[i])
         Arbol.Arbol.alture.append(alt[i])
@@ -26,7 +26,7 @@ def backtracking(distance_x, alt, height_aqueduct, alpha, beta):
 
 
 if __name__ == "__main__":
-    values, terrain_points, height_aqueduct, alpha, beta = read_file.read_file("testing/test5-1.in", data_separation=" ")
+    values, terrain_points, height_aqueduct, alpha, beta = read_file.read_file("testing/test18-10.in", data_separation=" ")
     distance, alt, distance_x = calculs.obtain_values(values)
 
     coste, impossible = backtracking(distance_x, alt, height_aqueduct, alpha, beta)

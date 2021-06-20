@@ -27,7 +27,7 @@ class Arbol:
                 distance = calculs.obtain_distance(self.arbol)
                 cost, impossible = calculs.costs_aqueduct(len(self.arbol), alpha, beta, height_aqueduct, self.alture, distance)
                 self.dynamic = self.dynamic + self.arbol
-                #print(self.dynamic)
+                print(self.dynamic)
                 if cost < self.minimo:
                     self.minimo = cost
                 return self.minimo
