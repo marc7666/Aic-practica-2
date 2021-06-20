@@ -4,7 +4,14 @@ Importing calculs.py
 import calculs
 
 
-class Arbol:  # pylint: disable=too-few-public-methods #pylint: disable=too-many-arguments
+# ************************************
+# Code made by:
+# Aaron Arenas Tomás
+# Marc Cervera Rosell
+# ************************************+
+
+# pylint: disable=too-many-arguments
+class Arbol:  # pylint: disable=R0903
     """
     This class generates a tree and the method calculates the cost of every branch.
     """

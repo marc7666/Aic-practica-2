@@ -1,3 +1,6 @@
+"""
+Author names
+"""
 # ************************************
 # Code made by:
 # Aaron Arenas Tomás
@@ -12,9 +15,8 @@ def calc_impossible_pont(alt, distance_x, distance, height_aqueduct, pos_ant_x):
     """
 
     radius = (distance / 2)
-    height = math.sqrt((radius ** 2 - (
-            (distance_x - pos_ant_x - radius) ** 2))
-                       ) + (height_aqueduct - radius)
+    height = math.sqrt((radius ** 2 - ((distance_x - pos_ant_x - radius) ** 2))) \
+             + (height_aqueduct - radius)
     return height > alt
 
 
@@ -51,6 +53,7 @@ def obtain_values(values):
 
     return distance, alt, distance_x
 
+
 def obtain_distance(distance_x):
     """This method obtains de three different values:
     the distance between two columns (d), the different heights (coordinates Y),
@@ -58,10 +61,7 @@ def obtain_distance(distance_x):
     """
 
     distance = []  # Distance
-    # Distance Coordinate Sol
-    alt = []  # Height
     ant_dis = -50
-
 
     if len(distance_x) == 2:
         distance.append(distance_x[len(distance_x) - 1] - distance_x[0])
@@ -71,6 +71,7 @@ def obtain_distance(distance_x):
                 distance.append(distance_x[pos] - ant_dis)
             ant_dis = distance_x[pos]
     return distance
+
 
 def measures(values):
     """
@@ -83,7 +84,7 @@ def measures(values):
     return coordinate_x, coordinate_y
 
 
-def costs_aqueduct(terrain_points, alpha, beta, height_aqueduct, alt, distance):
+def costs_aqueduct(terrain_points, alpha, beta, height_aqueduct, alt, distance):  # pylint: disable=R0913
     """
     This method calculates the costs of making an aqueduct
     """
@@ -102,18 +103,17 @@ def costs_aqueduct(terrain_points, alpha, beta, height_aqueduct, alt, distance):
             break
 
     cost = (alpha * costs_alt) + (beta * costs_dis)
-    #print(cost)
+    # print(cost)
     return cost, impossible
 
 
-def cost_pont(terrain_points, alpha, beta, height_aqueduct, alt, distance_x):
+def cost_pont(terrain_points, alpha, beta, height_aqueduct, alt, distance_x):  # pylint: disable=R0913
     """
     This method calculates the costs of making a bridge
     """
 
-    costs_alt_pont = (height_aqueduct - alt[0]) + (
-            height_aqueduct - alt[terrain_points - 1]
-    )
+    costs_alt_pont = (height_aqueduct - alt[0]) + \
+                     (height_aqueduct - alt[terrain_points - 1])
     d_pont = distance_x[terrain_points - 1] - distance_x[0]
     impossible = True
 
@@ -130,39 +130,3 @@ def cost_pont(terrain_points, alpha, beta, height_aqueduct, alt, distance_x):
     cost = ((alpha * costs_alt_pont) + (beta * (d_pont ** 2)))
 
     return cost, impossible
-
-
-def calculate(terrain_points, alpha, beta, height_aqueduct, values):
-    """
-    This method will calculate the possibility of making a bridge and
-    making an aqueduct and will return the best one of the possibilities
-    """
-
-    distance, alt, distance_x = obtain_values(values)
-    if terrain_points == 2:
-        cost2, impossible = costs_aqueduct(
-            terrain_points, alpha, beta, height_aqueduct, alt, distance
-        )
-        if impossible:
-            return cost2
-        return "impossible"
-
-    cost1, impossible_pont = cost_pont(
-        terrain_points, alpha, beta, height_aqueduct, alt, distance_x
-    )
-    cost2, impossible = costs_aqueduct(
-        terrain_points, alpha, beta, height_aqueduct, alt, distance
-    )
-
-    if impossible_pont and not impossible:
-        return cost1
-
-    if impossible and not impossible_pont:
-        return cost2
-
-    if cost1 < cost2 and impossible and impossible_pont:
-        return cost1
-
-    if cost1 > cost2 and impossible and impossible_pont:
-        return cost2
-    return "impossible"

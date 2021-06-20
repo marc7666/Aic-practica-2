@@ -1,3 +1,6 @@
+"""
+Author names
+"""
 import calculs
 import read_file
 import arbol
