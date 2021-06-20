@@ -1,9 +1,19 @@
-import arbol
+"""
+Author names
+"""
+# ************************************
+# Code made by:
+# Aaron Arenas Tomás
+# Marc Cervera Rosell
+# ************************************+
 import calculs
 import read_file
 
 
 def greedy(distance_x, alt, height_aqueduct, alpha, beta):
+    """
+    This method aplies the greedy strategy to solve the problem
+    """
     arbol = []
     alture = []
     impossible = True
@@ -23,9 +33,10 @@ def greedy(distance_x, alt, height_aqueduct, alpha, beta):
             arbol.append(distance_x[i])
             alture.append(alt[i])
             print(arbol)
-            #print(alture)
+            # print(alture)
             distance = calculs.obtain_distance(arbol)
-            cost, impossible = calculs.costs_aqueduct(len(arbol), alpha, beta, height_aqueduct, alture, distance)
+            cost, impossible = calculs.costs_aqueduct(
+                len(arbol), alpha, beta, height_aqueduct, alture, distance)
             print(cost)
             print(minimo)
             if cost < minimo:
@@ -42,17 +53,15 @@ def greedy(distance_x, alt, height_aqueduct, alpha, beta):
             arbol.append(distance_x[i])
             alture.append(alt[i])
             minimo = 1e+100
-        #print(arbol)
-        #print(pos)
+        # print(arbol)
+        # print(pos)
     print(arbol)
     return resultado, impossible
 
 
 if __name__ == "__main__":
-
-    values, terrain_points, height_aqueduct, alpha, beta = read_file.read_file("testing/test20-1.in", data_separation=" ")
-    distance, alt, distance_x = calculs.obtain_values(values)
-    cost, impossible = greedy(distance_x, alt, height_aqueduct, alpha, beta)
-    print(cost)
-
-
+    VALUES, TERRAIN_POINTS, HEIGHT_AQUEDUCT, ALPHA, BETA = read_file.read_file(
+        "testing/test20-1.in", data_separation=" ")
+    DISTANCE, ALT, DISTANCE_X = calculs.obtain_values(VALUES)
+    COST, IMPOSSIBLE = greedy(DISTANCE_X, ALT, HEIGHT_AQUEDUCT, ALPHA, BETA)
+    print(COST)
