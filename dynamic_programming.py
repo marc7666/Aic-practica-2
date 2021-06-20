@@ -25,7 +25,6 @@ def dynamic_programming(distance_x, alt, height_aqueduct, alpha, beta):
     arbol.Arbol.alture.append(alt[1])
     arbol.Arbol.hijos(arbol.Arbol, 2, distance_x, alt, height_aqueduct, alpha, beta)
 
-    print(arbol.Arbol.dynamic)
     pos = 2
     for _ in range(2, len(arbol.Arbol.dynamic)):
 
@@ -58,7 +57,7 @@ def dynamic_programming(distance_x, alt, height_aqueduct, alpha, beta):
 
 if __name__ == "__main__":
     VALUES, TERRAIN_POINTS, HEIGHT_AQUEDCUT, ALPHA, BETA = read_file.read_file(
-        "testing/test5-1.in", data_separation=" ")
+        "testing/test6-1.in", data_separation=" ")
 
     DISTANCE, ALT, DISTANCE_X = calculs.obtain_values(VALUES)
     IMPOSSIBLE = dynamic_programming(DISTANCE_X, ALT, HEIGHT_AQUEDCUT, ALPHA, BETA)
