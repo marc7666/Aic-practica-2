@@ -10,14 +10,13 @@ import calculs
 import read_file
 import arbol
 
-
-def greedy(distance_x, alt, height_aqueduct, alpha, beta, i, pos):  # pylint: disable=too-many-arguments
+def greedy(distance_x, alt, height_aqueduct, alpha, beta, i, pos):
     """
-    This method applies the greedy strategy to solve the problem.
-    This is the iterative version.
+    This method aplies the greedy strategy to solve the problem
     """
     resultado = arbol.Arbol.minimo
     print(resultado)
+    # guardar_vec(arbol)
     if arbol.Arbol.arbol[len(arbol.Arbol.arbol) - 1] != distance_x[len(distance_x) - 1]:
         if i < len(distance_x):
             arbol.Arbol.arbol.append(distance_x[i])
@@ -26,6 +25,8 @@ def greedy(distance_x, alt, height_aqueduct, alpha, beta, i, pos):  # pylint: di
             print(arbol.Arbol.arbol)
             cost, impossible = calculs.costs_aqueduct(
                 len(arbol.Arbol.arbol), alpha, beta, height_aqueduct, arbol.Arbol.alture, distance)
+            #print(cost)
+            #print(arbol.Arbol.minimo)
 
             if cost < arbol.Arbol.minimo:
                 arbol.Arbol.arbol.remove(distance_x[i])
@@ -41,7 +42,8 @@ def greedy(distance_x, alt, height_aqueduct, alpha, beta, i, pos):  # pylint: di
             arbol.Arbol.arbol.append(distance_x[i])
             arbol.Arbol.alture.append(alt[i])
             arbol.Arbol.minimo = 1e+100
-        greedy(distance_x, alt, height_aqueduct, alpha, beta, i + 1, pos)
+            #print(arbol.Arbol.minimo)
+        greedy(distance_x, alt, height_aqueduct, alpha, beta, i+1, pos)
 
     else:
         return resultado, arbol.Arbol.impossible
@@ -55,3 +57,4 @@ if __name__ == "__main__":
     arbol.Arbol.alture.append(ALT[0])
     arbol.Arbol.arbol.append(DISTANCE_X[0])
     COST, IMPOSSIBLE = greedy(DISTANCE_X, ALT, HEIGHT_AQUEDUCT, ALPHA, BETA, i=1, pos=1)
+    print(COST)
