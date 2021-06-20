@@ -1,5 +1,4 @@
 test:
-	python3 backtracking.py
 	python3 backtracking_rec.py
 	python3 dynamic_programming.py
 	python3 greedy.py
@@ -14,3 +13,6 @@ lint:
 	pylint read_file.py
 	pylint greedy_rec.py
 	pylint calculs.py
+
+test2:
+	python3 backtracking.py
