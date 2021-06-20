@@ -11,17 +11,18 @@ import calculs
 # ************************************+
 
 # pylint: disable=too-many-arguments
-class Arbol:  # pylint: disable=R0903
+# pylint: disable=E1121
+class Arbol:  # pylint: disable=too-few-public-methods
     """
     This class generates a tree and the method calculates the cost of every branch.
     """
 
-    arbol = []  # It will content the coordinates X
-    alture = []  # It will save the coordinates Y
+    arbol = []  # It will content the coordinates X of ell the tree
+    alture = []  # It will save the coordinates Y of all the trees
     impossible = True  # It will mark if the tree is possible
     minimo = 1e+100  # Minimum cost
-    dynamic = []  # It will content the all possibilities of every node
-    dynamic2 = []  # It will content the all possibilities of every node
+    dynamic = []  # It will content the X coordinates of the main branch
+    dynamic2 = []  # It will content the Y coordinates of the main branch
 
     def __init__(self, arbol, alture, impossible, minimo, dynamic, dynamic2):
         self.arbol = arbol
@@ -29,6 +30,7 @@ class Arbol:  # pylint: disable=R0903
         self.impossible = impossible
         self.minimo = minimo
         self.dynamic = dynamic
+        self.dynamic2 = dynamic2
 
     def hijos(self, indice, distance_x, alt, height_aqueduct, alpha, beta):
         """
@@ -42,16 +44,16 @@ class Arbol:  # pylint: disable=R0903
             self.arbol.pop()
             self.alture.pop()
             self.hijos(self, indice + 1, distance_x, alt, height_aqueduct, alpha, beta)
-            #print("hijo",indice, self.arbol)
+            # print("hijo",indice, self.arbol)
         else:
-            if self.arbol[len(self.arbol)-1] == distance_x[len(distance_x)-1]:
+            if self.arbol[len(self.arbol) - 1] == distance_x[len(distance_x) - 1]:
                 print("rama", indice, self.arbol)
                 distance = calculs.obtain_distance(self.arbol)
-                cost, impossible = calculs.costs_aqueduct(len(self.arbol), alpha, beta, height_aqueduct, self.alture, distance)
+                cost = calculs.costs_aqueduct(
+                    len(self.arbol), alpha, beta, height_aqueduct, self.alture, distance)
                 self.dynamic = self.dynamic + self.arbol
                 self.dynamic2 = self.dynamic2 + self.alture
 
-                #print(self.dynamic)
+                # print(self.dynamic)
                 if cost < self.minimo:
                     self.minimo = cost
-                return self.minimo
