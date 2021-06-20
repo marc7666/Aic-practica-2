@@ -10,7 +10,11 @@ import calculs
 import read_file
 import arbol
 
-class Greedy_glob:
+
+# pylint: disable=R0913
+# pylint: disable=E1121
+# pylint: disable=R0903
+class GreedyGlob:
     """
     This class generates a tree and the method calculates the cost of every branch.
     """
@@ -35,9 +39,11 @@ class Greedy_glob:
                 arbol.Arbol.arbol.append(distance_x[self.i])
                 arbol.Arbol.alture.append(alt[self.i])
                 distance = calculs.obtain_distance(arbol.Arbol.arbol)
-                #print(arbol.Arbol.arbol)
-                cost, arbol.Arbol.impossible = calculs.costs_aqueduct(
-                    len(arbol.Arbol.arbol), alpha, beta, height_aqueduct, arbol.Arbol.alture, distance)
+                # print(arbol.Arbol.arbol)
+                cost, arbol.Arbol.impossible = \
+                    calculs.costs_aqueduct(
+                        len(arbol.Arbol.arbol), alpha, beta, height_aqueduct,
+                        arbol.Arbol.alture, distance)
 
                 if cost < arbol.Arbol.minimo:
                     arbol.Arbol.arbol.remove(distance_x[self.i])
@@ -60,7 +66,6 @@ class Greedy_glob:
         return self.greedy(self, distance_x, alt, height_aqueduct, alpha, beta)
 
 
-
 if __name__ == "__main__":
     VALUES, TERRAIN_POINTS, HEIGHT_AQUEDUCT, ALPHA, BETA = read_file.read_file(
         "testing/test5-2.in", data_separation=" ")
@@ -68,5 +73,6 @@ if __name__ == "__main__":
     arbol.Arbol.alture.append(ALT[0])
     arbol.Arbol.arbol.append(DISTANCE_X[0])
 
-    COST, IMPOSSIBLE = Greedy_glob.greedy(Greedy_glob, DISTANCE_X, ALT, HEIGHT_AQUEDUCT, ALPHA, BETA)
+    COST, IMPOSSIBLE = GreedyGlob.greedy(
+        GreedyGlob, DISTANCE_X, ALT, HEIGHT_AQUEDUCT, ALPHA, BETA)
     print(COST)

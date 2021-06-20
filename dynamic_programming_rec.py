@@ -11,6 +11,10 @@ import read_file
 import arbol
 
 
+# pylint: disable=R0913
+# pylint: disable=E1121
+# pylint: disable=R0903
+
 class Dynamic:
     """
     This class generates a tree and the method calculates the cost of every branch.
@@ -38,7 +42,6 @@ class Dynamic:
             arbol.Arbol.alture.append(alt[1])
             arbol.Arbol.hijos(arbol.Arbol, 2, distance_x, alt, height_aqueduct, alpha, beta)
 
-
         if self.pos < len(arbol.Arbol.dynamic):
             if arbol.Arbol.dynamic[self.pos] != distance_x[len(distance_x) - 1]:
                 self.res_distance.append(arbol.Arbol.dynamic[self.pos])
@@ -50,8 +53,8 @@ class Dynamic:
                 self.res_alture.insert(0, alt[0])
                 self.res_alture.append(alt[len(alt) - 1])
                 distance = calculs.obtain_distance(self.res_distance)
-                #print(self.res_distance)
-                cost, impossible = calculs.costs_aqueduct(
+                # print(self.res_distance)
+                cost, arbol.Arbol.impossible = calculs.costs_aqueduct(
                     len(self.res_distance), alpha, beta, height_aqueduct, self.res_alture, distance)
 
                 if cost < arbol.Arbol.minimo:
@@ -65,13 +68,13 @@ class Dynamic:
         else:
             return arbol.Arbol.minimo
 
-        return self.dynamic_programming(self,distance_x, alt, height_aqueduct, alpha, beta)
+        return self.dynamic_programming(self, distance_x, alt, height_aqueduct, alpha, beta)
+
 
 if __name__ == "__main__":
-
     VALUES, TERRAIN_POINTS, HEIGHT_AQUEDCUT, ALPHA, BETA = read_file.read_file(
         "testing/test6-1.in", data_separation=" ")
 
     DISTANCE, ALT, DISTANCE_X = calculs.obtain_values(VALUES)
-    coste = Dynamic.dynamic_programming(Dynamic, DISTANCE_X, ALT, HEIGHT_AQUEDCUT, ALPHA, BETA)
-    print(coste)
+    COSTE = Dynamic.dynamic_programming(Dynamic, DISTANCE_X, ALT, HEIGHT_AQUEDCUT, ALPHA, BETA)
+    print(COSTE)

@@ -13,6 +13,7 @@ lint:
 	pylint read_file.py
 	pylint greedy_rec.py
 	pylint calculs.py
+	pylint dynamic_programming_rec.py
 
 test2:
 	python3 backtracking.py
