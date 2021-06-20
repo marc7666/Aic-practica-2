@@ -19,15 +19,13 @@ class Arbol:  # pylint: disable=too-few-public-methods
 
     arbol = []  # It will content the coordinates X of ell the tree
     alture = []  # It will save the coordinates Y of all the trees
-    impossible = True  # It will mark if the tree is possible
     minimo = 1e+100  # Minimum cost
     dynamic = []  # It will content the X coordinates of the main branch
     dynamic2 = []  # It will content the Y coordinates of the main branch
 
-    def __init__(self, arbol, alture, impossible, minimo, dynamic, dynamic2):
+    def __init__(self, arbol, alture, minimo, dynamic, dynamic2):
         self.arbol = arbol
         self.alture = alture
-        self.impossible = impossible
         self.minimo = minimo
         self.dynamic = dynamic
         self.dynamic2 = dynamic2
@@ -45,10 +43,11 @@ class Arbol:  # pylint: disable=too-few-public-methods
             self.alture.pop()
             self.hijos(self, indice + 1, distance_x, alt, height_aqueduct, alpha, beta)
         else:
-            if self.arbol[len(self.arbol)-1] == distance_x[len(distance_x)-1]:
+            if self.arbol[len(self.arbol) - 1] == distance_x[len(distance_x) - 1]:
                 print("rama", indice, self.arbol)
                 distance = calculs.obtain_distance(self.arbol)
-                cost, impossible = calculs.costs_aqueduct(len(self.arbol), alpha, beta, height_aqueduct, self.alture, distance)
+                cost, impossible = calculs.costs_aqueduct(
+                    len(self.arbol), alpha, beta, height_aqueduct, self.alture, distance)
                 self.dynamic = self.dynamic + self.arbol
                 self.dynamic2 = self.dynamic2 + self.alture
 
