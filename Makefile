@@ -1,8 +1,13 @@
+
 test:
-	python3 backtracking_rec.py
-	python3 dynamic_programming.py
-	python3 greedy.py
-	python3 greedy_rec.py
+	make test_iterative
+	make test_recursive
+
+test_iterative:
+	python3 ....
+
+test_recursive:
+	python3 ....
 
 lint:
 	pylint arbol.py
@@ -14,9 +19,6 @@ lint:
 	pylint greedy_rec.py
 	pylint calculs.py
 	pylint dynamic_programming_rec.py
-
-test2:
-	python3 backtracking.py
 
 all:
 	make lint
