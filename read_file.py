@@ -1,3 +1,8 @@
+"""
+Author names
+"""
+
+
 # ************************************
 # Code made by:
 # Aaron Arenas Tomás
