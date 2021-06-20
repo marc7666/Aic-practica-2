@@ -1,9 +1,21 @@
+"""
+Author names
+"""
+# ************************************
+# Code made by:
+# Aaron Arenas Tomás
+# Marc Cervera Rosell
+# ************************************
 import calculs
 import read_file
 import arbol
 
 
-def DynamicProgramming(distance_x, alt, height_aqueduct, alpha, beta):
+def dynamic_programming(distance_x, alt, height_aqueduct, alpha, beta):
+    """
+    This method applies the dynamic programming to solve the problem.
+    This is the iterative version
+    """
     impossible = True
     res_distance = []
     res_alture = []
@@ -11,13 +23,13 @@ def DynamicProgramming(distance_x, alt, height_aqueduct, alpha, beta):
     arbol.Arbol.alture.append(alt[0])
     arbol.Arbol.arbol.append(distance_x[1])
     arbol.Arbol.alture.append(alt[1])
-    coste = arbol.Arbol.hijos(arbol.Arbol, 2, distance_x, alt, height_aqueduct, alpha, beta)
+    arbol.Arbol.hijos(arbol.Arbol, 2, distance_x, alt, height_aqueduct, alpha, beta)
 
     print(arbol.Arbol.dynamic)
     pos = 2
-    for i in range(2, len(arbol.Arbol.dynamic)):
+    for _ in range(2, len(arbol.Arbol.dynamic)):
 
-        if (arbol.Arbol.dynamic[pos] != distance_x[len(distance_x) - 1]):
+        if arbol.Arbol.dynamic[pos] != distance_x[len(distance_x) - 1]:
             res_distance.append(arbol.Arbol.dynamic[pos])
             res_alture.append(arbol.Arbol.dynamic2[pos])
         else:
@@ -27,8 +39,8 @@ def DynamicProgramming(distance_x, alt, height_aqueduct, alpha, beta):
             res_alture.append(alt[len(alt) - 1])
 
             distance = calculs.obtain_distance(res_distance)
-            cost, impossible = calculs.costs_aqueduct(len(res_distance), alpha, beta, height_aqueduct, res_alture, distance)
-
+            cost, impossible = calculs.costs_aqueduct(
+                len(res_distance), alpha, beta, height_aqueduct, res_alture, distance)
 
             if cost < arbol.Arbol.minimo:
                 arbol.Arbol.minimo = cost
@@ -43,11 +55,12 @@ def DynamicProgramming(distance_x, alt, height_aqueduct, alpha, beta):
         pos = pos + 1
     return impossible
 
+
 if __name__ == "__main__":
-    values, terrain_points, height_aqueduct, alpha, beta = read_file.read_file(
+    VALUES, TERRAIN_POINTS, HEIGHT_AQUEDCUT, ALPHA, BETA = read_file.read_file(
         "testing/test5-1.in", data_separation=" ")
 
-    distance, alt, distance_x = calculs.obtain_values(values)
-    impossible = DynamicProgramming(distance_x, alt, height_aqueduct, alpha, beta)
-    print(impossible)
+    DISTANCE, ALT, DISTANCE_X = calculs.obtain_values(VALUES)
+    IMPOSSIBLE = dynamic_programming(DISTANCE_X, ALT, HEIGHT_AQUEDCUT, ALPHA, BETA)
+    print(IMPOSSIBLE)
     print(arbol.Arbol.minimo)
