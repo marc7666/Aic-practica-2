@@ -6,7 +6,6 @@ Author names
 # Aaron Arenas Tomás
 # Marc Cervera Rosell
 # ************************************+
-import sys
 import read_file
 import arbol
 
@@ -16,20 +15,22 @@ def leer_ejecutar(i, j):
     Reading de input file withe the data problem
     """
 
-    NUM = "" + str(j)
-    FILE = "testing/test" + str(i) + "-" + NUM + ".in"
-    VALUES, TERRAIN_POINTS, HEIGHT_AQUEDUCT, ALPHA, BETA = read_file.read_file(FILE, data_separation=" ")
+    num = "" + str(j)
+    file = "testing/test" + str(i) + "-" + num + ".in"
+    values, terrain_points, heihgt_aqueduct, alpha, beta = \
+        read_file.read_file(file, data_separation=" ")
 
-    return VALUES, TERRAIN_POINTS, HEIGHT_AQUEDUCT, ALPHA, BETA
+    return values, terrain_points, heihgt_aqueduct, alpha, beta
+
 
 def escribir_ejecutar(i, j):
     """
     Reading de input file withe the data problem
     """
-    NUM = "" + str(j)
-    FILE = "testing/test" + str(i) + "-" + NUM + ".in"
+    num = "" + str(j)
+    file = "testing/test" + str(i) + "-" + num + ".in"
     print("---------------------------------------")
-    print("Fitx", FILE)
+    print("Fitx", file)
     print("---------------------------------------")
     print("Resultado introducido en el output.ans")
     print("---------------------------------------")
@@ -38,14 +39,14 @@ def escribir_ejecutar(i, j):
     file_ans = open('output.ans', 'w')
     file_ans.write(str(arbol.Arbol.minimo) + '\n')
     file_ans.close()
-    FILE = "testing/test" + str(i) + "-" + NUM + ".ans"
+    file = "testing/test" + str(i) + "-" + num + ".ans"
 
-    with open(FILE) as a:
-        contentA = set(a)
-    with open("output.ans") as b:
-        contentB = set(b)
+    with open(file) as file_a:
+        content_a = set(file_a)
+    with open("output.ans") as file_b:
+        content_b = set(file_b)
 
-    if contentB == contentA:
+    if content_b == content_a:
         print("OK")
 
     arbol.Arbol.arbol = []  # It will content the coordinates X of all the tree
@@ -55,14 +56,15 @@ def escribir_ejecutar(i, j):
     arbol.Arbol.dynamic = []  # It will content the X coordinates of the main branch
     arbol.Arbol.dynamic2 = []  # It will content the Y coordinates of the main branch
 
+
 def escribir_ejecutar2(i, j, coste):
     """
     Reading de input file withe the data problem
     """
-    NUM = "" + str(j)
-    FILE = "testing/test" + str(i) + "-" + NUM + ".in"
+    num = "" + str(j)
+    file = "testing/test" + str(i) + "-" + num + ".in"
     print("---------------------------------------")
-    print("Fitx", FILE)
+    print("Fitx", file)
     print("---------------------------------------")
     print("Resultado introducido en el output.ans")
     print("---------------------------------------")
@@ -71,14 +73,14 @@ def escribir_ejecutar2(i, j, coste):
     file_ans = open('output.ans', 'w')
     file_ans.write(str(coste) + '\n')
     file_ans.close()
-    FILE = "testing/test" + str(i) + "-" + NUM + ".ans"
+    file = "testing/test" + str(i) + "-" + num + ".ans"
 
-    with open(FILE) as a:
-        contentA = set(a)
-    with open("output.ans") as b:
-        contentB = set(b)
+    with open(file) as file_a:
+        content_a = set(file_a)
+    with open("output.ans") as file_b:
+        content_b = set(file_b)
 
-    if contentB == contentA:
+    if content_b == content_a:
         print("OK")
 
     arbol.Arbol.arbol = []  # It will content the coordinates X of all the tree

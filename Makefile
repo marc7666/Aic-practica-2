@@ -19,6 +19,7 @@ lint:
 	pylint greedy_rec.py
 	pylint calculs.py
 	pylint dynamic_programming_rec.py
+	pylint ejecutrar_test.py
 
 all:
 	make lint

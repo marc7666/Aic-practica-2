@@ -6,11 +6,10 @@ Author names
 # Aaron Arenas Tomás
 # Marc Cervera Rosell
 # ************************************
+from colorama import Fore
 import calculs
 import ejecutrar_test
-import read_file
 import arbol
-from colorama import Fore
 
 
 # pylint: disable=R0913
@@ -75,20 +74,18 @@ class Dynamic:
 
 if __name__ == "__main__":
 
-
     i = 5
     j = 1
     for i in range(i, 8):
         for j in range(1, 4):
-
-            VALUES, TERRAIN_POINTS, HEIGHT_AQUEDCUT, ALPHA, BETA = ejecutrar_test.leer_ejecutar(i, j)
+            VALUES, TERRAIN_POINTS, HEIGHT_AQUEDCUT, ALPHA, BETA = \
+                ejecutrar_test.leer_ejecutar(i, j)
             print("---------------------------------------")
             print(Fore.RED + "      Dynamic Programming recursive" + Fore.RESET)
             DISTANCE, ALT, DISTANCE_X = calculs.obtain_values(VALUES)
-            coste = Dynamic.dynamic_programming(Dynamic, DISTANCE_X, ALT, HEIGHT_AQUEDCUT, ALPHA, BETA)
+            coste = Dynamic.dynamic_programming(Dynamic, DISTANCE_X, ALT,
+                                                HEIGHT_AQUEDCUT, ALPHA, BETA)
             Dynamic.res_distance = []
             Dynamic.res_alture = []
             Dynamic.pos = 2
             ejecutrar_test.escribir_ejecutar2(i, j, coste)
-
-

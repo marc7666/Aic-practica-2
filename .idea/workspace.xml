@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9b06228c-46f7-4ddf-8c1d-a4d4f2cc956f" name="Default Changelist" comment="arbol comentado falta acabar">
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/arbol.py" beforeDir="false" afterPath="$PROJECT_DIR$/arbol.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backtracking.py" beforeDir="false" afterPath="$PROJECT_DIR$/backtracking.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backtracking_rec.py" beforeDir="false" afterPath="$PROJECT_DIR$/backtracking_rec.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crear-temps-grafica.py" beforeDir="false" afterPath="$PROJECT_DIR$/crear-temps-grafica.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dynamic_programming.py" beforeDir="false" afterPath="$PROJECT_DIR$/dynamic_programming.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dynamic_programming_rec.py" beforeDir="false" afterPath="$PROJECT_DIR$/dynamic_programming_rec.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ejecutrar_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/ejecutrar_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/greedy.py" beforeDir="false" afterPath="$PROJECT_DIR$/greedy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/greedy_rec.py" beforeDir="false" afterPath="$PROJECT_DIR$/greedy_rec.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/arbol.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/read_file.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/greedy_rec.py" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectId" id="1uCstqFYlLUCCyfk7NrlPP3Qvmc" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="PyConsoleConfigurable.Python Console" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings sdk-home="/usr/bin/python3.8">
+        <option name="mySdkHome" value="/usr/bin/python3.8" />
+      </console-settings>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="greedy_rec" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/bin/python3.8" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/greedy_rec.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.greedy_rec" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9b06228c-46f7-4ddf-8c1d-a4d4f2cc956f" name="Default Changelist" comment="" />
+      <created>1624181135720</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1624181135720</updated>
+      <workItem from="1624181161846" duration="18251000" />
+      <workItem from="1624213907792" duration="135000" />
+      <workItem from="1624220863051" duration="985000" />
+    </task>
+    <task id="LOCAL-00001" summary="Pylint arbol con un 9.66">
+      <created>1624182310174</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1624182310174</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Arreglat Arbol -&gt; arbol">
+      <created>1624182423749</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1624182423749</updated>
+    </task>
+    <task id="LOCAL-00003" summary="arbol.py afegit al git">
+      <created>1624182589454</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1624182589455</updated>
+    </task>
+    <task id="LOCAL-00004" summary="pylint">
+      <created>1624183525875</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1624183525875</updated>
+    </task>
+    <task id="LOCAL-00005" summary="pylint v2.0">
+      <created>1624184491836</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1624184491836</updated>
+    </task>
+    <task id="LOCAL-00006" summary="pylint greedy.py -&gt; 10&#10;pylint read_file.py -&gt; 10&#10;pylint arbol.py -&gt; 10&#10;pylint calculs.py -&gt; 9.84">
+      <created>1624185437344</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1624185437344</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Makefile creat">
+      <created>1624185756708</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1624185756708</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Pylint:&#10;arbol.py -&gt; 10&#10;backtracking.py -&gt; 10&#10;backtracking_rec.py -&gt; 10&#10;calculs.py -&gt; 9.84&#10;greedy.py -&gt; 10&#10;read_file.py -&gt; 10">
+      <created>1624187912551</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1624187912551</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Pylint:&#10;arbol.py -&gt; 10&#10;backtracking.py -&gt; 10&#10;backtracking_rec.py -&gt; 10&#10;calculs.py -&gt; 9.84&#10;greedy.py -&gt; 10&#10;read_file.py -&gt; 10&#10;dynamic_programming.py -&gt; 10">
+      <created>1624188291889</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1624188291889</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Pylint:&#10;arbol.py -&gt; 9.66&#10;backtracking.py -&gt; 10&#10;backtracking_rec.py -&gt; 10&#10;calculs.py -&gt; 9.84&#10;greedy.py -&gt; 10&#10;read_file.py -&gt; 10&#10;dynamic_programming.py -&gt; 10">
+      <created>1624188486228</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1624188486228</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Makefile parcialment implementad, no provat">
+      <created>1624193698105</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1624193698105</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Makefile parcialment implementad, no provat v2.0">
+      <created>1624198301274</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1624198301275</updated>
+    </task>
+    <task id="LOCAL-00013" summary="pylint v3.0">
+      <created>1624203412612</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1624203412612</updated>
+    </task>
+    <task id="LOCAL-00014" summary="make">
+      <created>1624206356170</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1624206356170</updated>
+    </task>
+    <task id="LOCAL-00015" summary="make">
+      <created>1624206380385</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1624206380385</updated>
+    </task>
+    <task id="LOCAL-00016" summary="make lint acabat">
+      <created>1624206812949</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1624206812949</updated>
+    </task>
+    <task id="LOCAL-00017" summary="ctrl + alt + L en todos los ficheros">
+      <created>1624206989154</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1624206989154</updated>
+    </task>
+    <task id="LOCAL-00018" summary="read_file.py comentado y acabado">
+      <created>1624208170904</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1624208170905</updated>
+    </task>
+    <task id="LOCAL-00019" summary="read_file.py comentado y acabado">
+      <created>1624208210213</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1624208210213</updated>
+    </task>
+    <task id="LOCAL-00020" summary="read_file.py comentado y acabado ara si">
+      <created>1624208223783</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1624208223783</updated>
+    </task>
+    <task id="LOCAL-00021" summary="makefile">
+      <created>1624208413656</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1624208413656</updated>
+    </task>
+    <task id="LOCAL-00022" summary="arbol comentado falta acabar">
+      <created>1624208670877</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1624208670877</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Pylint arbol con un 9.66" />
+    <MESSAGE value="Arreglat Arbol -&gt; arbol" />
+    <MESSAGE value="arbol.py afegit al git" />
+    <MESSAGE value="pylint" />
+    <MESSAGE value="pylint v2.0" />
+    <MESSAGE value="pylint greedy.py -&gt; 10&#10;pylint read_file.py -&gt; 10&#10;pylint arbol.py -&gt; 10&#10;pylint calculs.py -&gt; 9.84" />
+    <MESSAGE value="Makefile creat" />
+    <MESSAGE value="Pylint:&#10;arbol.py -&gt; 10&#10;backtracking.py -&gt; 10&#10;backtracking_rec.py -&gt; 10&#10;calculs.py -&gt; 9.84&#10;greedy.py -&gt; 10&#10;read_file.py -&gt; 10" />
+    <MESSAGE value="Pylint:&#10;arbol.py -&gt; 10&#10;backtracking.py -&gt; 10&#10;backtracking_rec.py -&gt; 10&#10;calculs.py -&gt; 9.84&#10;greedy.py -&gt; 10&#10;read_file.py -&gt; 10&#10;dynamic_programming.py -&gt; 10" />
+    <MESSAGE value="Pylint:&#10;arbol.py -&gt; 9.66&#10;backtracking.py -&gt; 10&#10;backtracking_rec.py -&gt; 10&#10;calculs.py -&gt; 9.84&#10;greedy.py -&gt; 10&#10;read_file.py -&gt; 10&#10;dynamic_programming.py -&gt; 10" />
+    <MESSAGE value="Makefile parcialment implementad, no provat" />
+    <MESSAGE value="Makefile parcialment implementad, no provat v2.0" />
+    <MESSAGE value="pylint v3.0" />
+    <MESSAGE value="make" />
+    <MESSAGE value="make lint acabat" />
+    <MESSAGE value="ctrl + alt + L en todos los ficheros" />
+    <MESSAGE value="read_file.py comentado y acabado" />
+    <MESSAGE value="read_file.py comentado y acabado ara si" />
+    <MESSAGE value="makefile" />
+    <MESSAGE value="arbol comentado falta acabar" />
+    <option name="LAST_COMMIT_MESSAGE" value="arbol comentado falta acabar" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Aic_practica_2$Backtracking.coverage" NAME="backtracking Coverage Results" MODIFIED="1624187923452" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Aic_practica_2$greedy_rec.coverage" NAME="greedy_rec Coverage Results" MODIFIED="1624214028311" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>
