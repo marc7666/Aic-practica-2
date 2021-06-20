@@ -25,6 +25,7 @@ class Arbol:  # pylint: disable=too-few-public-methods
     dynamic2 = []  # It will content the Y coordinates of the main branch
 
     def __init__(self, arbol, alture, impossible, minimo, dynamic, dynamic2):
+        # Initializing the variables
         self.arbol = arbol
         self.alture = alture
         self.impossible = impossible
@@ -41,10 +42,10 @@ class Arbol:  # pylint: disable=too-few-public-methods
             # distance_x = distances between X coordinates.
             self.arbol.append(distance_x[indice])
             self.alture.append(alt[indice])
-            self.hijos(self, indice + 1, distance_x, alt, height_aqueduct, alpha, beta)
+            self.hijos(self, indice + 1, distance_x, alt, height_aqueduct, alpha, beta)  # Recursive call
             self.arbol.pop()
             self.alture.pop()
-            self.hijos(self, indice + 1, distance_x, alt, height_aqueduct, alpha, beta)
+            self.hijos(self, indice + 1, distance_x, alt, height_aqueduct, alpha, beta)  # Recursive call
         else:  # Calculating the costs of every branch. Are the all the possible bridges
             if self.arbol[len(self.arbol) - 1] == distance_x[len(distance_x) - 1]:
                 # print("rama", indice, self.arbol)
