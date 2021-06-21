@@ -17,17 +17,17 @@ IMPORTANT: **Els errors de pylint desabilitats al llarg del codi son falsos posi
 
 En aquest fitxer s'ha passat a recursiu el mètode del fitxer _greedy.py_.
 
-![alt text](https://github.com/marc7666/Aic-practica-2/blob/main/imatges/Greedy.jpg?raw=true)
-
 ### Greedy iteratiu:
-
+## ejemplo:
+![alt text](https://github.com/marc7666/Aic-practica-2/blob/main/imatges/Greedy.jpg?raw=true)
 ### Backtracking recursiu:
 
 En aquest fitxer s'ha passat a recursiu el mètode del fitxer _backtracking.py_.
 
-![alt text](https://github.com/marc7666/Aic-practica-2/blob/main/imatges/Backtracking.jpg)
-
 ### Backtracking iteratiu:
+
+## ejemplo:
+![alt text](https://github.com/marc7666/Aic-practica-2/blob/main/imatges/Backtracking.jpg)
 
 ### Dynamic programming recursiu:
 
