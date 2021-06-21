@@ -77,6 +77,31 @@ dynamic => Llista que conté les coordenades 'x' de la branca que s'està analit
 
 dynamic2 => Llista de coordenades 'y' de la branca que s'està analitzant.
 
+L'explicació del mètode "hijos", es dividirà en dues parts per facilitar-ne l'explicació.
+
+La primera part es la de l'_if_, on la condició d'entrada passa per comprovar si el node pare no es una fulla de l'arbre. Un cop dins del condicional, el primer que es fa és introduir en les llistes corresponents, la 'x' i la 'y' del node que s'està analitzant. Seguidament, es realitza una crida recursiva amb el següent node.
+
+L'esquema de funcionament del mètode seria: "El node M té fills? si en té, li preguntem al node M + 1 (el fill) si te fills. En cas que el node M no tingui fills anem al node M - 1 (el seu pare) i realitzem la mteixa operació. Un cop generada la rama es calcula el cost".
+
+Finalment, en aquesta primera part, com ja s'ha arribat a una fulla de l'arbre, s'extreuen nodes (es puja a l'arbre) fins a arribar a un node que tingui més fills.
+
+La segona part, la de l'_else_, és la part que calcula els costos de les rames. Per fer-ho s'ha utilitzat l'estratègia descrita a continuació.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
