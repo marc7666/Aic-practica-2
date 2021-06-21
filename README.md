@@ -19,7 +19,7 @@ En aquest fitxer s'ha passat a recursiu el mètode del fitxer _greedy.py_.
 
 ### Greedy iteratiu:
 
-*Ejemplo:*
+**Ejemplo:**
 ![alt text](https://github.com/marc7666/Aic-practica-2/blob/main/imatges/Greedy.jpg?raw=true)
 
 ### Backtracking recursiu:
