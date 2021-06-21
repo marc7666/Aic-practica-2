@@ -23,7 +23,15 @@ En primer lloc, s'inicialitzaràn dues llistes anomenades "arbol" i "alture". La
 
 En segon lloc, s'inicialitzen quatre variables enteres. La primera anomenada "minimo", establirà el cost mínim, la segona anomenada "resultado" guardarà el resultat d'aplicar l'estratègia _greedy_, la tercera anomenada "pos" serveix controlar el valor del node anterior amb cost inferior per a un cop acabada la volta de bucle dels fills, buscar els fills de menor cost. L'última variable anomenada "i", és un posicionador per als vectors de coordenades 'x' i 'y' el qual permetrà les posició següent a cada volta del bucle.
 
-Un cop inicialitzades les variables, "comença" l'estratègia en si. La condició del bucle es tradueix en que mentre no s'estigui en una fulla, que es doni voltes al _lop_.
+Un cop inicialitzades les variables, "comença" l'estratègia en si. La condició del bucle es tradueix en que mentre no s'estigui en el nivell final de la branca amb menor cost, que es continui donant voltes al _loop_.
+
+Un cop dins del bucle, el primer a fer és incrementar en 1 el posicionador per així ignorar l'arrel de l'arbre. Seguidament, si el posicionador no ha arribat al final de la llista de coordenades 'x', s'introdueixen, en les llistes pertinents, la coordenada 'x' i la coordenada 'y' que marqui el posicionador dins de les arrays que contenen les susdites coordenades. A continuació, mitjançant el mètode _obtain_distance_, és calculen les distàncies entre columnes i mitjançant el mètode _costs_aqueduct_ es calcula el cost de construir l'aqüeducte i la possibilitat de fer-ho. Sense sortir d'aquest condicional, comprovem si el cost calculat és menor al mínim. Si ho és, actualitzem el valor del mínim i la posició del susdit cost menor per a comparar els seus fills mes endavant. Un cop fet això, s'elimina l'últim valor de les llistes "arbol" i "alture" per a la següent volta del bucle afegir el següent valor a comprovar.
+
+
+
+
+
+
 
 
 
