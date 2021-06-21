@@ -37,21 +37,19 @@ def greedy(distance_x, alt, height_aqueduct, alpha, beta):
         if i < len(distance_x):
             arbol.append(distance_x[i])
             alture.append(alt[i])
-            # print(arbol)
+            #print(arbol)
             distance = calculs.obtain_distance(arbol)
             cost, impossible = calculs.costs_aqueduct(
                 len(arbol), alpha, beta, height_aqueduct, alture, distance)
             # print(cost)
             # print(minimo)
             if cost < minimo:
-                arbol.remove(distance_x[i])
-                alture.remove(alt[i])
                 minimo = cost
                 resultado = cost
                 pos = i
-            else:
-                arbol.remove(distance_x[i])
-                alture.remove(alt[i])
+
+            arbol.remove(distance_x[i])
+            alture.remove(alt[i])
         else:
             i = pos
             arbol.append(distance_x[i])

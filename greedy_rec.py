@@ -48,14 +48,12 @@ class GreedyGlob:
                         arbol.Arbol.alture, distance)
 
                 if cost < arbol.Arbol.minimo:
-                    arbol.Arbol.arbol.remove(distance_x[self.i])
-                    arbol.Arbol.alture.remove(alt[self.i])
                     arbol.Arbol.minimo = cost
                     self.resultado = cost
                     self.pos = self.i
-                else:
-                    arbol.Arbol.arbol.remove(distance_x[self.i])
-                    arbol.Arbol.alture.remove(alt[self.i])
+
+                arbol.Arbol.arbol.remove(distance_x[self.i])
+                arbol.Arbol.alture.remove(alt[self.i])
             else:
                 self.i = self.pos
                 arbol.Arbol.arbol.append(distance_x[self.i])

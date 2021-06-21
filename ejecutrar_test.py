@@ -37,7 +37,7 @@ def escribir_ejecutar(i, j):
     print("Resultado RECURSIVO: ", arbol.Arbol.minimo)
     print("-------------------------")
     file_ans = open('output.ans', 'w')
-    file_ans.write(str(arbol.Arbol.minimo) + '\n')
+    file_ans.write(" "+str(arbol.Arbol.minimo) + '\n')
     file_ans.close()
     file = "testing/test" + str(i) + "-" + num + ".ans"
 
@@ -71,7 +71,7 @@ def escribir_ejecutar2(i, j, coste):
     print("Resultado RECURSIVO: ", coste)
     print("-------------------------")
     file_ans = open('output.ans', 'w')
-    file_ans.write(str(coste) + '\n')
+    file_ans.write(" "+str(coste) + '\n')
     file_ans.close()
     file = "testing/test" + str(i) + "-" + num + ".ans"
 

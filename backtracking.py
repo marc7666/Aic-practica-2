@@ -21,9 +21,7 @@ def backtracking(distance_x, alt, height_aqueduct, alpha, beta):
     print(Fore.BLUE + "             Backtracking " + Fore.RESET)
     arbol.Arbol.arbol.append(distance_x[0])
     arbol.Arbol.alture.append(alt[0])
-    if len(arbol.Arbol.arbol) == 2 and distance_x[len(distance_x) - 1] == \
-            arbol.Arbol.arbol[len(arbol.Arbol.arbol) - 1]:
-        pass
+
     for _ in range(1, len(distance_x)):
         arbol.Arbol.arbol.append(distance_x[i])
         arbol.Arbol.alture.append(alt[i])
