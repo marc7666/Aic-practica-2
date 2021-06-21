@@ -132,18 +132,3 @@ Primerament, s'inicialitzen dues variables enteres que controlaràn, una els cos
 Seguidament, mitjançant un bucle, que donarà voltes fnis que la variable de control hagi arribat al valor de la variable "n" proporcionada per les dades del propi problema és calcula: primerament, costos d'altura establerts com la suma dels costos anteriors mes la resta l'altura total de l'aqüeducte i la coordenada 'y' corresponent. A continuació si la variable de control és major a 0 (hi ha mínim un valor més a la llista de distàncies) és calcula el valor del booleà mitjançant una crida a _calc_impossible_. Seguidament, si la variable del bucle es menor al nombre punts del terreny menys 1 (si no es fes la resta la llista sortitia d'índex), s'actualitzen els costos de distància establerts com la suma entre: els costos de distància anteriors mes la distància entre un parell de columnes al quadrat. Com a última comprovació del bucle, hi ha un condicional que tallarà l'execució del bucle quan el valor de la variable booleana canviï de valor.
 
 Finalment, es calcula el cost total mitjançant la formula proporcionada en l'enunciat de la pràctica i es retorna aquest cost i el booleà que marca la possibilitat de construcció.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
