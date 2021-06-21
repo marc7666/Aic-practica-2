@@ -61,6 +61,41 @@ Amb la comanda _make all_ s'executaràn a més de tots els testos, l'eina pylint
 
 ### arbol.py:
 
+El primer que s'observa en el fitxer és una classe anomenada "Arbol", la qual conté 6 variables globals i un dos mètodes: el constructor i un que genera tots els possibles fills i en calcula el cost.
+
+Les variables globals són:
+
+arbol => Llista que conté totes les coordenades 'x' de l'arbre.
+
+alture => Llista que conté totes les coordenades 'y' de l'arbre.
+
+impossible => Booleà que controla la possibilitat de crear l'aqüeducte.
+
+minimo => Enter que marca el cost mínim.
+
+dynamic => Llista que conté les coordenades 'x' de la branca que s'està analitzant.
+
+dynamic2 => Llista de coordenades 'y' de la branca que s'està analitzant.
+
+
+
+
 ### calculs.py:
 
 En obrir 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
