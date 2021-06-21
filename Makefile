@@ -4,14 +4,10 @@ test:
 	make test_recursive
 
 test_iterative:
-	python3 backtracking.py
-	python3 dynamic_programming.py
-	python3 greedy.py
+	python3 ....
 
 test_recursive:
-	python3 backtracking_rec.py
-	python3 dynamic_programming_rec.py
-	python3 greedy_rec.py
+	python3 ....
 
 lint:
 	pylint arbol.py
