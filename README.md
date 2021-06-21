@@ -91,28 +91,33 @@ En primer lloc, el condicional assegura que hem arribat a una fulla. Un cop s'ha
 
 Finalment, s'actualitza el valor del booleà "impossible", el "dynamic", el "dynamic2" i es comprova el cost mínim.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ### calculs.py:
 
-En obrir 
+En obrir el fitxer, el primer mètode que s'observa és _calc_impossible_pont_ però d'aquest mètode no s'en donarà cap especificació atès que és de la implementació de la primera pràctica. L'equip de desenvolupament, ha obtat per deixar el codi d'aquest mètode juntament amb el del mètode _cost_pont_ que també és de la primera pràctica.
 
+El primer mètode "útil" per al desenvolupament d'aquesta segona pràctica, és el mètode _calc_impossible_ que retorna cert o fals en funció de si es possible construir, o no, un aqüeducte. Per determinar aquesta possibilitat, primerament és realitza el calcul del radi com "distance / 2" on:
+
+distance => distància entre dues columnes
+
+En segon lloc es calcula l'altura de l'aqüeducte com la resta entre l'altura total i el radi.
+
+Finalment, es retorna _True_ si l'altura recentment calculada és major a una coordenada 'y'.
+
+El següent mètode observable, és _obtain_values_, el qual retorna tres valors diferents; la distància entre dues columnes, les diferents altures (coordenades 'y') i les coordenades 'x'.
+
+L'estratègia seguida és: en primer lloc, s'nicialitzxen 4 variable:
+
+distance => Llista que contindrà les distàncies entre columnes.
+
+distance_x => Llista que contindrà les coordenades 'x'.
+
+alt => Llista que contindrà les coordenades 'y'.
+
+ant_dis => Distància anterior.
+
+Aleshores per emplenar cada llista amb els valors, s'utilitza un bucle que primerament obté les coordenades 'x' i 'y' les quals introdueix en la llista corresponent i seguidament, comprova que la distància anterior sigui diferent al valor inicial (significa que no estem a la primera columna). En cas d'entrar en aquest condicional, s'introdueix a la llista de distàncies la resta entre la 'x' de la columna actual i la 'x' de la columna anterior.
+
+Finalment, s'actualitza el valor de la distància anterior i es retornen les tres llistes.
 
 
 
