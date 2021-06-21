@@ -25,15 +25,11 @@ En segon lloc, s'inicialitzen quatre variables enteres. La primera anomenada "mi
 
 Un cop inicialitzades les variables, "comença" l'estratègia en si. La condició del bucle es tradueix en que mentre no s'estigui en el nivell final de la branca amb menor cost, que es continui donant voltes al _loop_.
 
-Un cop dins del bucle, el primer a fer és incrementar en 1 el posicionador per així ignorar l'arrel de l'arbre. Seguidament, si el posicionador no ha arribat al final de la llista de coordenades 'x', s'introdueixen, en les llistes pertinents, la coordenada 'x' i la coordenada 'y' que marqui el posicionador dins de les arrays que contenen les susdites coordenades. A continuació, mitjançant el mètode _obtain_distance_, és calculen les distàncies entre columnes i mitjançant el mètode _costs_aqueduct_ es calcula el cost de construir l'aqüeducte i la possibilitat de fer-ho. Sense sortir d'aquest condicional, comprovem si el cost calculat és menor al mínim. Si ho és, actualitzem el valor del mínim i la posició del susdit cost menor per a comparar els seus fills mes endavant. Un cop fet això, s'elimina l'últim valor de les llistes "arbol" i "alture" per a la següent volta del bucle afegir el següent valor a comprovar.
+Un cop dins del bucle, el primer a fer és incrementar en 1 el posicionador per així ignorar l'arrel de l'arbre. Seguidament, si el posicionador no ha arribat al final de la llista de coordenades 'x', s'introdueixen, en les llistes pertinents, la coordenada 'x' i la coordenada 'y' que marqui el posicionador dins de les arrays que contenen les susdites coordenades. A continuació, mitjançant el mètode _obtain_distance_, és calculen les distàncies entre columnes i mitjançant el mètode _costs_aqueduct_ es calcula el cost de construir l'aqüeducte i la possibilitat de fer-ho. Sense sortir d'aquest condicional, es comprova si el cost calculat és menor al mínim. Si ho és, s'actualitza el valor del mínim i la posició del susdit cost menor per a comparar els seus fills mes endavant. Un cop fet això, s'elimina l'últim valor de les llistes "arbol" i "alture" per a la següent volta del bucle afegir el següent valor a comprovar.
 
+Un cop acabada la volta d'un nivell, es comença amb els següent nivell, per a comprovar els fills amb menor cost. Un cop seleccionat el el fill amb menor cost, s'introdueix en les llistes corresponents les seves coordenades i es reinicia el valor del mínim.
 
-
-
-
-
-
-
+Un cop es trobi una solució al problema, es retorna el resultat (el cost) i la possibilitat de construir l'aqüeducte. 
 
 **Ejemplo:**
 ![alt text](https://github.com/marc7666/Aic-practica-2/blob/main/imatges/Greedy.jpg?raw=true)
