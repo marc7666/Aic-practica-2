@@ -19,6 +19,10 @@ En aquest fitxer s'ha passat a recursiu el mètode del fitxer _greedy.py_.
 
 ### Greedy iteratiu:
 
+En primer lloc, s'inicialitzaràn dues llistes anomenades "arbol" i "alture". La primera contindrà les coordenades 'x' i la segona les coordenades 'y'.
+
+En segon lloc, s'inicialitzen quatre variables enteres. La primera anomenada "minimo", establirà el cost mínim, la segona anomenada "resultado" guardarà el resultat d'aplicar l'estratègia _greedy_, la tercera anomenada "pos" serveix controlar el valor del node anterior amb cost inferior per a un cop acabada la volta de bucle dels fills, buscar els fills de menor cost. L'última variable anomenada "i", és un contador
+
 **Ejemplo:**
 ![alt text](https://github.com/marc7666/Aic-practica-2/blob/main/imatges/Greedy.jpg?raw=true)
 
