@@ -87,6 +87,10 @@ Finalment, en aquesta primera part, com ja s'ha arribat a una fulla de l'arbre, 
 
 La segona part, la de l'_else_, és la part que calcula els costos de les rames. Per fer-ho s'ha utilitzat l'estratègia descrita a continuació.
 
+En primer lloc, el condicional assegura que hem arribat a una fulla. Un cop s'ha comprovat que s'està en una fulla, s'obté la distància entre un parell de columnes gràcies al mètode _obtain_distance_ del fitxer _calculs.py_. Seguidament, i gràcies també al mètode _costs_aquedutct_ del mateix fitxer, es calcula el cost de construir l'aqüeducte i la possibilitat.
+
+Finalment, s'actualitza el valor del booleà "impossible", el "dynamic", el "dynamic2" i es comprova el cost mínim.
+
 
 
 
