@@ -119,6 +119,20 @@ Aleshores per emplenar cada llista amb els valors, s'utilitza un bucle que prime
 
 Finalment, s'actualitza el valor de la distància anterior i es retornen les tres llistes.
 
+A continuació, el mètode _obtain_distance_ és presentat en el fitxer. Aquest mètode retorna una llista amb les distànciues entre columnes.  El funcionament és paregut al de la funció anterior però amb algun petit canvi. En primer lloc s'observa un condicional que comprova que hi hagi exactament dues coordenades 'x', cosa que vol dir que només hi haurà dues columnes i per tant, un pont. En aquest cas, s'introdueix la distància entre aquestes columnes amb la resta descrita en l'anterior mètode i es retorna la llista.
+
+En cas d'haver més de dues coordenades 'x' i que, per tant, hi hagi més d'un possible pont, es calcula per cada coordenada 'x' la distància entre columnes i finalment, es retorna la llista amb les distàncies.
+
+El mètode següent, és l'anomenat _measures_ que retorna la coordenada 'x' i la coordenada 'y' d'un punt del terreny donada la seva tupla.
+
+Com a útlim "mètode" útil per a la resolució d'aquesta pràctica, hi ha el màtode _costs_aqueduct_ el qual retorna el cost de construir un aqüeducte i la possibilitat de fer-ho.
+
+Primerament, s'inicialitzen dues variables enteres que controlaràn, una els costos d'altura i l'altra, els costos de distància. Com a última variable a inicialitzar, s'inicialitza un booleà que controlarà la mpossibilitat de crear l'aqüeducte.
+
+Seguidament, mitjançant un bucle, que donarà voltes fnis que la variable de control hagi arribat al valor de la variable "n" proporcionada per les dades del propi problema és calcula: primerament, costos d'altura establerts com la suma dels costos anteriors mes la resta l'altura total de l'aqüeducte i la coordenada 'y' corresponent. A continuació si la variable de control és major a 0 (hi ha mínim un valor més a la llista de distàncies) és calcula el valor del booleà mitjançant una crida a _calc_impossible_. Seguidament, si la variable del bucle es menor al nombre punts del terreny menys 1 (si no es fes la resta la llista sortitia d'índex), s'actualitzen els costos de distància establerts com la suma entre: els costos de distància anteriors mes la distància entre un parell de columnes al quadrat. Com a última comprovació del bucle, hi ha un condicional que tallarà l'execució del bucle quan el valor de la variable booleana canviï de valor.
+
+Finalment, es calcula el cost total mitjançant la formula proporcionada en l'enunciat de la pràctica i es retorna aquest cost i el booleà que marca la possibilitat de construcció.
+
 
 
 
