@@ -9,19 +9,25 @@ Aarón Arenas | Marc Cervera
 ------------ | ------------
 https://github.com/aaron-at97 | https://github.com/marc7666
 
-IMPORTANT: **Els errors desabilitats al llarg del codi son falsos positius de l'eina pylint**
+IMPORTANT: **Els errors de pylint desabilitats al llarg del codi son falsos positius de l'eina pylint**
 
 ## Fitxers i mètodes:
 
 ### Greedy recursiu:
 
+En aquest fitxer s'ha passat a recursiu el mètode del fitxer _greedy.py_.
+
 ### Greedy iteratiu:
 
 ### Backtracking recursiu:
 
+En aquest fitxer s'ha passat a recursiu el mètode del fitxer _backtracking.py_.
+
 ### Backtracking iteratiu:
 
 ### Dynamic programming recursiu:
+
+En aquest fitxer s'ha passat a recursiu el mètode del fitxer _dynamic_programming.py_.
 
 ### Dynamic programming iteratiu:
 
