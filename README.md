@@ -53,6 +53,15 @@ En aquest fitxer s'ha passat a recursiu el mètode del fitxer _dynamic_programmi
 
 ### Dynamic programming iteratiu:
 
+Calcul de tots el fills de la primera branca del node arrel.
+
+
+
+
+
+
+
+
 ### Read file:
 
 Primera ment s’ha implementat un script anomenat ‘read_file.py’, el qual llegeix el fitxer línia a línia.
