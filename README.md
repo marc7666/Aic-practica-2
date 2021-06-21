@@ -56,3 +56,5 @@ Amb la comanda _make all_ s'executaràn a més de tots els testos, l'eina pylint
 ### arbol.py:
 
 ### calculs.py:
+
+En obrir 
