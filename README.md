@@ -53,6 +53,8 @@ En aquest fitxer s'ha passat a recursiu el mètode del fitxer _dynamic_programmi
 
 ### Dynamic programming iteratiu:
 
+![alt text](https://github.com/marc7666/Aic-practica-2/blob/main/imatges/imagen.png)
+
 Calcul de tots el fills de la primera branca del node arrel.
 
 
