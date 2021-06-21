@@ -55,14 +55,19 @@ En aquest fitxer s'ha passat a recursiu el mètode del fitxer _dynamic_programmi
 
 ![alt text](https://github.com/marc7666/Aic-practica-2/blob/main/imatges/imagen.png)
 
-Calcul de tots el fills de la primera branca del node arrel.
+La imatge anterior realitza el càlcul de tots el fills de la primera branca del node arrel.
 
+Abanns d'entrar al bucle que realitza els calculs, es defineix una variable entera anomenada "pos" que serrvirà per avançar dins de cada rama (de posició en posició) i per saltar a la rama següent (cada dos posicions). El fet que sigui cada dos posicions és per ignorar l'arrel de l'arbre i la primera branca de l'arrel.
 
+Seguidament, s'entra en el bucle _for_ que s'inicialitza a 2 i donarà voltes mentre no arribi al final de la llista que conté les coordenades 'x' de la branca calculada per la funció _hijos_ (la primera branca de l'arrel).
 
+El bucle està estructuruat en una sentència bàsica de condicionals _if_, _else_. La condició d'entrada a l'_if_ que no s'estigui en una fulla. En cas d'entrar, s'introdueixen a les llistes pertinents (res_distance i res_alture), les coordenades 'x' i 'y' del node que s'està tractant. En cas de estar en una fulla, es reescriuen els dos vectors de resultat, posant l'arrel en la posició 0 de cada vector (en cada vector la coordenada de l'arrel que correspongui). A continuació, es calcula les distàncies entre columnes mitjançant una crida al mètode _obtain_distance_ i es calcula tant el cost com la possibilitat de contruir l'aqüeducte.
 
+Seguidament, es comprova si cost calculat és menor al mínim i si és així s'actualitza el valor.
 
+Per continuar, es comprova si "res_distance", vector que conté les coordenades 'x' del resultat solsament té 2 valors, cosa que significa que només hi ha l'arrel de l'arbre i una fulla i això també implica que ja s'ha recorrregut tot l'arbre. Per finalitzar la part de l'_else_, s'incrementa en 2 la variable "pos" i es reinicien els vectors de resultat.
 
-
+Finalment, al final de cada volta del bucle s'incrementarà en 1 la variable "pos" i es retornarà la possibilitat de construir o no l'aqüeducte.
 
 ### Read file:
 
