@@ -95,7 +95,7 @@ def costs_aqueduct(terrain_points, alpha, beta, height_aqueduct, alt, distance):
 
     for i in range(0, terrain_points):
         costs_alt += (height_aqueduct - alt[i])
-        if i > 0:
+        if i > 0:  # More than one column
             impossible = calc_impossible(alt[i], distance[i - 1], height_aqueduct)
         if i < terrain_points - 1:
             costs_dis += (distance[i] ** 2)
