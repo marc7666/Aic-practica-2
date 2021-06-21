@@ -23,9 +23,9 @@ def backtracking(distance_x, alt, height_aqueduct, alpha, beta):
     arbol.Arbol.alture.append(alt[0])
 
     for _ in range(1, len(distance_x)):
-        arbol.Arbol.arbol.append(distance_x[i])
-        arbol.Arbol.alture.append(alt[i])
-        indice = distance_x.index(distance_x[i])
+        arbol.Arbol.arbol.append(distance_x[_])
+        arbol.Arbol.alture.append(alt[_])
+        indice = distance_x.index(distance_x[_])
         arbol.Arbol.hijos(arbol.Arbol, indice + 1,
                           distance_x, alt, height_aqueduct, alpha, beta)
         arbol.Arbol.arbol.pop()
