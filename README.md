@@ -40,6 +40,10 @@ En aquest fitxer s'ha passat a recursiu el mètode del fitxer _backtracking.py_.
 
 ### Backtracking iteratiu:
 
+En primer lloc, s'introdueix a les llistes pertinents, les coordenades de l'arrel.
+
+En segon lloc, és realitza un bucle _for_ (es segueix l'esquema donat a teoria), que s'inicia a 1 (per evitar l'arrel). El que es farà a cada volta del bucle, és introduir en les llistes pertinents les coordenades del node que s'està tractant, es calcularà l'índex de la coordenada 'x' (l'índex que ocupa en la llista que conté totes les coordenades 'x') i s'utilitzarà aquest índex per realitzar una crida al mètode "hijos" definit en l'arxiu _arbol.py_. Finalment, s'eliminen de les llistes "arbol" i "alture" l'últim valor, corresponents a les coordenades del node que s'està tractant en la volta actual del bucle, per evitar conflictes amb altres nodes en les següents voltes.
+
 **Ejemplo:**
 ![alt text](https://github.com/marc7666/Aic-practica-2/blob/main/imatges/Backtracking.jpg)
 
